@@ -164,11 +164,11 @@ function initUpdater(opts: ReturnType<typeof validateInput>) {
 
         const dialogOpts = {
           type: 'info',
-          buttons: ['Restart', 'Later'],
-          title: 'Application Update',
+          buttons: ['Redémarrer', 'Plus tard'],
+          title: "Mise à jour de l'application",
           message: process.platform === 'win32' ? releaseNotes : releaseName,
           detail:
-            'A new version has been downloaded. Restart the application to apply the updates.',
+            "Une nouvelle version a été téléchargée. Redémarrez l'application pour appliquer les mises à jour.",
         };
 
         dialog.showMessageBox(dialogOpts).then(({ response }) => {
